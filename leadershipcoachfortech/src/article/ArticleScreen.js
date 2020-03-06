@@ -9,6 +9,8 @@ import {APP_CONFIGURATION} from "../appConfiguration";
 import HeadlineText from "../components_library/texts/HeadlineText";
 import SeparatorPane from "../components_library/panes/SeparatorPane";
 import * as Sentry from "@sentry/browser";
+import HeaderImage from "../components_library/images/HeaderImage";
+import MetaTags from 'react-meta-tags';
 
 /**
  * Screen showing a single article. The text can contain html tags. In this case we render them.
@@ -109,11 +111,27 @@ class ArticleScreen extends Component {
 
     render() {
 
+        // MetaTags are for LinkedIn to properly fetch title and image
+        // TODO I need to server-render the website for LinkedIn to actually see these meta tags
+
         return (
 
             <React.Fragment>
 
+                <MetaTags>
+                    <meta property="og:title" content={this.state.article[0].title} />
+                    <meta property="og:image" content={this.state.article[0].field_header_image ?
+                        APP_CONFIGURATION.backendUrl + this.state.article[0].field_header_image :
+                        APP_CONFIGURATION.backendUrl + this.state.article[0].field_image} />
+                </MetaTags>
+
                 <CentralContentPane>
+
+                    {this.state.article[0].field_header_image &&
+                        <HeaderImage src={APP_CONFIGURATION.backendUrl + this.state.article[0].field_header_image}
+                                     alt={this.state.article[0].title}
+                                     backgroundColor={APP_CONFIGURATION.defaultColorsTable["DARKGREY"]} />
+                    }
 
                     <SeparatorPane />
 

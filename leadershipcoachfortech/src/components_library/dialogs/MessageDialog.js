@@ -10,12 +10,7 @@ import CenteringPane from "../panes/CenteringPane";
 import StandardButton from "../buttons/StandardButton";
 import StandardIcon from "../icons/StandardIcon";
 
-// TODO MessageDialog seems to be more of a screen than a component in the library
-// It's because there is no style. I may call it MessageScreen
-
 /**
- * FIXME doc
- *
  * Message dialog to notify successful completion of operations.
  * Used as well for errors.
  *
