@@ -1,0 +1,27 @@
+
+/* TODO consider removing -webkit-animation and -moz-animation or maybe better */
+/* move this classes to their component (src/components_library/panes/BlinkingPane.js) */
+
+.blinking {
+     -webkit-animation: blink 5s infinite;
+     -moz-animation: blink 5s infinite;
+     animation: blink 5s infinite;
+}
+
+@-webkit-keyframes blink {
+     0% { opacity:0.6; }
+     50% { opacity: 1; }
+     100% { opacity:0.6; }
+}
+
+@-moz-keyframes blink {
+     0% { opacity:0.6; }
+     50% { opacity: 1; }
+     100% { opacity:0.6; }
+}
+
+@keyframes blink {
+     0% { opacity:0.6; }
+     50% { opacity: 1; }
+     100% { opacity:0.6; }
+}
