@@ -17,6 +17,18 @@ bash-5.0# npm install -g create-react-app@2.1.3 --save-exact
 Copied src from old leadershipcoachfortech folder to /home/esantanche/SwProjects/leadershipcoachfortech-in-docker/leadershipcoachfortech/
 Copied package.json from old project
 [root@1b1dbc2039c2 leadershipcoachfortech]# npm install
-npm run
+npm run start
 
 Works!!!
+
+Command to start the React dev server
+=========================================
+[root@1b1dbc2039c2 app]# cd /app/leadershipcoachfortech/
+[root@1b1dbc2039c2 leadershipcoachfortech]# npm run start
+
+Commands to build
+===========================
+[root@1b1dbc2039c2 app]# cd /app/leadershipcoachfortech/
+[root@1b1dbc2039c2 leadershipcoachfortech]# rm -R build/
+[root@1b1dbc2039c2 leadershipcoachfortech]# npm run build
+

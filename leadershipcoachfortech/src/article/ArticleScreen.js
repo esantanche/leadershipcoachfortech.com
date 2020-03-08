@@ -123,6 +123,8 @@ class ArticleScreen extends Component {
                     <meta property="og:image" content={this.state.article[0].field_header_image ?
                         APP_CONFIGURATION.backendUrl + this.state.article[0].field_header_image :
                         APP_CONFIGURATION.backendUrl + this.state.article[0].field_image} />
+                    <meta property='og:description' content={this.state.article[0].title} />
+                    <meta property='og:url' content={window.location.href} />
                 </MetaTags>
 
                 <CentralContentPane>
