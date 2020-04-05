@@ -1,6 +1,8 @@
-# Website for my activity as coach
+# Website for my activity as coach, React edition
 
-It's this website: https://leadershipcoachfortech.com/
+It's this website: http://reactedition.leadershipcoachfortech.com/
+
+It's the old React edition. Now I'm using Svelte. See repository https://github.com/esantanche/lcft-svelte.
 
 ## Tech I used
 
